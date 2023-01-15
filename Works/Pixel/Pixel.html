@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Pixel.css">
+</head>
+<body>
+    <div id="display">
+        <canvas id="background"></canvas>
+        <canvas id="canvas"></canvas>
+    </div>
+    <div id="UI">
+        <input type="color" id="brushcolor">
+        <input type="range" id="brushsize" min="1" max="16" value="1">
+        <div>
+            <button onclick="paletteSet(1);" class="palette" id="color1"></button>
+            <button onclick="paletteSet(2);" class="palette" id="color2"></button>
+            <button onclick="paletteSet(3);" class="palette" id="color3"></button>
+            <button onclick="paletteSet(4);" class="palette" id="color4"></button>
+            <button onclick="paletteSet(5);" class="palette" id="color5"></button>
+            <button onclick="paletteSet(6);" class="palette" id="color6"></button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="Pixel.js"></script>
+</body>
+</html>

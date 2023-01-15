@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+#display {
+    position: relative;
+}
+
+canvas {
+    border: 3px solid black;
+    position: absolute;
+}
+
+#UI {
+    position: absolute;
+    width: 15%;
+    background-color: mediumturquoise;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+.palette {
+    width: 25px;
+    height: 25px;
+    border: none;
+    outline: 1px solid black;
+    border-radius: 25px;
+}
+
+#UI div {
+    margin: 20px;
+}
+
+.palette:hover {
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+
+#color1 {
+    background-color: mistyrose;
+}
+
+#color2 {
+    background-color: lightgoldenrodyellow;
+}
+
+#color3 {
+    background-color: paleturquoise;
+}
+
+#color4 {
+    background-color: lightpink;
+}
+
+#color5 {
+    background-color: plum;
+}
+
+#color6 {
+    background-color: violet;
+}

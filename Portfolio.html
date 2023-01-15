@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profolio</title>
+    <link rel= "stylesheet" href="Portfolio.css">
+</head>
+<body>
+    <div class="menu">
+        <h3 class="main">Web Portfolio</h3>
+        <h3 onclick="gototitle()">Title</h3>
+        <h3 onclick="gotolinks()">Links</h3>
+        <h3 onclick="gotoabout()">About</h3>
+    </div>
+
+    <h1 style="font-size: 60px" class="title">My Portfolio: Garak11</h1>
+
+    <div class="banner" id="title">
+        <div class="item">
+            <div id="image1"></div>
+        </div>
+
+        <button id="left" onclick="left()"></button>
+        <button id="right" onclick="right()"></button>
+
+        <div class="item"> 
+            <div id="image2"></div>
+        </div>
+        <div class="item">
+            <div id="image3"></div>
+        </div>
+        <div class="item">
+            <div id="image4"></div>
+        </div>
+        <div class="item">
+            <div id="image5"></div>
+        </div>
+    </div>
+
+    <div class="container1" id="links">
+        <a href="../Flex/Flex.html"><div class="web">
+            <div id="flex"></div>
+            <h4>Flex</h4>
+        </div></a>
+        <a href="../Profolio-22-12-2022/Works/Pong/index.html"><div class="web">
+            <div id="pong"></div>
+            <h4>Pong</h4>
+        </div></a>
+        <a href="../Pixel/Pixel.html"><div class="web">
+            <div id="pixel"></div>
+            <h4>Pixel</h4>
+        </div></a>
+        <a href="../Profolio-22-12-2022/Works/220206 Ocean wave.html"><div class="web">
+            <div id="oceanWave"></div>
+            <h4>Ocean Wave</h4>
+        </div></a>
+    </div>
+    <div class="container2">
+        <a href="../Animation/Moon/Moon.html"><div class="web2">
+            <div id="moon"></div>
+            <h4>Moon Animation</h4>
+        </div></a>
+        <a href="../Profolio-22-12-2022/Works/Today's date/date.html"><div class="web2">
+            <div id="today"></div>
+            <h4>Today's Date</h4>
+        </div></a>
+    </div>
+
+    <h3 style="font-size: 30px" id="about">About</h3>
+    <p style="font-size: 20px;">My Github username is Garak11 and I am from Seoul, South Korea. There are many things I like such as aesthetics,
+    the night sky, gemstones, cute stationary, magic, books, fairy lights and so much more. I have a 2 year old malteze-poodle mix called Coco
+    and he is so adorable! I am a single child and have lived before in England (London) and Hong Kong. I know three different langauges- 
+    Chinese, English and Korean. </p>
+
+    <br />
+
+    <h3 style="font-size: 30px">Moon Animation</h3>
+    <p style="font-size: 20px;">This website is an animation of a Moon shaped peice of the night sky decorated with stars and is probably my
+        favourite which is why I'm writing a description for only this website. For the code, I used Math.random in script to create shooting stars
+        randomly and @keyframes in CSS to create the animations. One of the most notable part of the process for me was when we used two 
+        overlapping, different coloured circles to create the cresent moon you can see in the final website - I think this was especially 
+        eye-catching because it was a new course of action to create a unique shape. One thing coding this taught me was the skill to use 
+        @keyframes, transform and other animation related code like animation-duration and opacity to generate the illusion of a shooting star 
+        falling down, becoming more transparent as it goes down, and ending with an opacity of 0%, which means it is invisible.
+    </p>
+
+    <script>
+        var items = document.getElementsByClassName("item");
+        var idx = 2
+        function display() {
+            for (var i = 0; i < 5; i++) {
+                if (i < idx) {
+                    items[i].classList = "item bannerLeft";
+                }else if (i > idx) {
+                    items[i].classList = "item bannerRight";
+                }else{
+                    items[i].classList = "item";
+                }
+            } 
+        }
+
+        function left(){
+            idx = (idx + 4) % 5;
+            display();
+        }
+        function right(){
+            idx = (idx + 1) % 5;
+            display();
+        }
+
+        function gotolinks() {
+            var togo = document.getElementById("links");
+            window.scrollTo({top:togo.offsetTop, behavior:"smooth"});
+        }
+
+        function gototitle() {
+            var togo = document.getElementById("title");
+            window.scrollTo({top:togo.offsetTop, behavior:"smooth"});
+        }
+
+        function gotoabout() {
+            var togo = document.getElementById("about");
+            window.scrollTo({top:togo.offsetTop, behavior:"smooth"});
+        }
+    
+    </script>
+
+</body>
+</html>
